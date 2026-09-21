@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#24170f">
+  <title>Jashang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="ambient-glow"></div>
+
+    <section class="book-wrap" aria-label="Interactive scrapbook">
+      <div class="closed-book" id="closedBook">
+        <div class="book-cover cover-back"></div>
+                <button class="book-cover cover-front" id="openBook" type="button" aria-label="Open our scrapbook">
+        <span class="cover-border"></span>
+
+        <video class="cover-video" autoplay muted loop playsinline preload="auto">
+            <source src="timelapse.mp4" type="video/mp4">
+        </video>
+
+        <span class="cover-hint">tap to open</span>
+        </button>
+        <div class="book-pages-edge"></div>
+      </div>
+
+      <div class="open-book" id="openBookView" aria-hidden="true">
+        <div class="book-shadow"></div>
+        <div class="spine-shadow"></div>
+
+        <div class="spread" id="spread">
+          <article class="page page-left" id="pageLeft"></article>
+          <article class="page page-right" id="pageRight"></article>
+        </div>
+
+        <button class="nav prev" id="prevBtn" type="button" aria-label="Previous page">‹</button>
+        <button class="nav next" id="nextBtn" type="button" aria-label="Next page">›</button>
+
+        <div class="page-indicator" id="pageIndicator">01 / 06</div>
+        <div class="swipe-hint" id="swipeHint">swipe to turn the page</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
